@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ETHIQ – salary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+<header>
+  <a class="brand" href="index.html"><span class="triangle"></span> ETHIQ</a>
+  <input class="top-search" placeholder="Search roles, companies, docs…" />
+  <div class="top-right">
+    <span>Product and engineering recruitment</span>
+    <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>ETHIQ</h3>
+    <div class="nav-list">
+      <a class="" href="index.html">Dashboard</a><a class="" href="roles.html">Live roles</a><a class="" href="engineers.html">Engineers</a><a class="" href="companies.html">Companies</a>
+    </div>
+
+    <h3 style="margin-top:18px;">Public docs</h3>
+    <div class="nav-list">
+      <a class="" href="docs-about.html">about.md</a><a class="active" href="docs-salary.html"><strong>salary.md</strong></a><a class="" href="docs-handbook.html">recruitment-handbook.md</a><a class="" href="docs-roadmap.html">roadmap.md</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    
+<div class="page-title">
+  <h1>Public docs / salary.md</h1>
+  <p>Salary ranges, notes, and opinions (kept short on purpose).</p>
+</div>
+
+<section class="panel">
+  <div class="panel-header"><h2>Salary notes</h2><span>Quick + pragmatic</span></div>
+  <ul>
+    <li>We prefer publishing ranges. Candidates do too.</li>
+    <li>Comp is context: location, seniority, scope, and company stage.</li>
+    <li>If you won’t share a range, expect slower hiring and weaker signal.</li>
+  </ul>
+  <div class="help">This is a placeholder page. We can evolve it into a proper salary guide per region.</div>
+</section>
+
+<section class="panel">
+  <div class="panel-header"><h2>Starter ranges (example)</h2><span>Demo only</span></div>
+  <ul>
+    <li>Senior Product Engineer (UK): £90k–£125k</li>
+    <li>Platform Engineer (EU remote): €85k–€130k</li>
+    <li>Applied AI Engineer (US): $150k–$230k</li>
+  </ul>
+</section>
+
+
+  </main>
+
+  <aside class="rightbar">
+    <div class="right-section">
+      <div class="right-title">Start here</div>
+      <div class="right-cta"><a class="btn primary" href="roles.html">Browse roles</a></div>
+      <div class="right-cta"><a class="btn" href="contact.html">Talk to ETHIQ</a></div>
+    </div>
+
+    <div class="right-section">
+      <div class="right-title">Latest updates</div>
+      <div class="activity-item">Demo mode
+        <span>Roles are loaded from a local sample feed for now.</span>
+      </div>
+      <div class="activity-item">Docs scaffolded
+        <span>Handbook, salary notes, roadmap.</span>
+      </div>
+    </div>
+
+    <div class="right-section" style="font-size:12px; color:var(--muted);">
+      UK · Europe · US<br />
+      Product and engineering hiring.
+    </div>
+  </aside>
+
+</div>
+
+<script>
+  const toggle = document.getElementById('modeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('ethiq-theme') === 'dark') {
+    body.classList.remove('light');
+    toggle.textContent = '☀️';
+  }
+
+  toggle.addEventListener('click', () => {
+    const isLight = body.classList.contains('light');
+    body.classList.toggle('light', !isLight);
+    toggle.textContent = isLight ? '☀️' : '🌙';
+    localStorage.setItem('ethiq-theme', isLight ? 'dark' : 'light');
+  });
+</script>
+</body>
+</html>

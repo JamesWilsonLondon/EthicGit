@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ETHIQ – companies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+<header>
+  <a class="brand" href="index.html"><span class="triangle"></span> ETHIQ</a>
+  <input class="top-search" placeholder="Search roles, companies, docs…" />
+  <div class="top-right">
+    <span>Product and engineering recruitment</span>
+    <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>ETHIQ</h3>
+    <div class="nav-list">
+      <a class="" href="index.html">Dashboard</a><a class="" href="roles.html">Live roles</a><a class="" href="engineers.html">Engineers</a><a class="active" href="companies.html"><strong>Companies</strong></a>
+    </div>
+
+    <h3 style="margin-top:18px;">Public docs</h3>
+    <div class="nav-list">
+      <a class="" href="docs-about.html">about.md</a><a class="" href="docs-salary.html">salary.md</a><a class="" href="docs-handbook.html">recruitment-handbook.md</a><a class="" href="docs-roadmap.html">roadmap.md</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    
+<div class="page-title">
+  <h1>ETHIQ / companies</h1>
+  <p>Hiring for product-led teams. No theatre. No CV spam. Just a tight loop with clear standards.</p>
+</div>
+
+<section class="panel">
+  <div class="panel-header"><h2>Who we partner with</h2><span>Selected</span></div>
+  <ul>
+    <li>Ambitious tech product companies (seed to growth).</li>
+    <li>Teams that value quality, speed, and clarity (in that order).</li>
+    <li>Leaders who want a partner embedded in the work.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <div class="panel-header"><h2>How we work</h2><span>Forward-deployed recruiting</span></div>
+  <p>We behave like a forward-deployed recruiting team: close to the roadmap, present in the trade-offs, and accountable for the outcomes. You get signal, not noise.</p>
+  <ul>
+    <li>Role shaping: scope, bar, and “what good looks like”.</li>
+    <li>Search strategy: target list, channels, outreach, and feedback loop.</li>
+    <li>Process design: fewer stages, more signal. We’ll tell you when it’s getting silly.</li>
+  </ul>
+  <div class="cta-row">
+    <a class="btn primary" href="contact.html">Talk to ETHIQ</a>
+    <a class="btn" href="docs-handbook.html">Read the handbook</a>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-header"><h2>Mini case studies</h2><span>Short, not marketing</span></div>
+  <ul>
+    <li><strong>AI startup (NY):</strong> shaped a founding eng role, aligned on bar, closed in 31 days.</li>
+    <li><strong>Infra (Berlin):</strong> rebuilt interview loop, reduced time-to-offer, landed first platform hire.</li>
+    <li><strong>Devtools (UK):</strong> replaced “culture fit” chat with a structured scorecard. Better hires. Less bias.</li>
+  </ul>
+</section>
+
+  </main>
+
+  <aside class="rightbar">
+    <div class="right-section">
+      <div class="right-title">Start here</div>
+      <div class="right-cta"><a class="btn primary" href="roles.html">Browse roles</a></div>
+      <div class="right-cta"><a class="btn" href="contact.html">Talk to ETHIQ</a></div>
+    </div>
+
+    <div class="right-section">
+      <div class="right-title">Latest updates</div>
+      <div class="activity-item">Demo mode
+        <span>Roles are loaded from a local sample feed for now.</span>
+      </div>
+      <div class="activity-item">Docs scaffolded
+        <span>Handbook, salary notes, roadmap.</span>
+      </div>
+    </div>
+
+    <div class="right-section" style="font-size:12px; color:var(--muted);">
+      UK · Europe · US<br />
+      Product and engineering hiring.
+    </div>
+  </aside>
+
+</div>
+
+<script>
+  const toggle = document.getElementById('modeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('ethiq-theme') === 'dark') {
+    body.classList.remove('light');
+    toggle.textContent = '☀️';
+  }
+
+  toggle.addEventListener('click', () => {
+    const isLight = body.classList.contains('light');
+    body.classList.toggle('light', !isLight);
+    toggle.textContent = isLight ? '☀️' : '🌙';
+    localStorage.setItem('ethiq-theme', isLight ? 'dark' : 'light');
+  });
+</script>
+</body>
+</html>
